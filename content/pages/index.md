@@ -4,22 +4,17 @@ title: Home
 colors: colors-a
 backgroundImage:
   type: BackgroundImage
-  url: /images/bg1.jpg
+  url: /images/launching-soon-bg.jpg
   backgroundSize: cover
   backgroundPosition: center
   backgroundRepeat: no-repeat
-  opacity: 75
+  opacity: 25
 sections:
   - elementId: ''
     colors: colors-f
     backgroundSize: full
-    title: >-
-      I’m a developer, digital artist, consultant and a bunch of other
-      impressive titles and buzz words.
-    subtitle: >-
-      This is my info—I’m sharing it all this with ya’ll to impress you with all
-      the hard work I’ve done in the past few years. Once you’re impressed, you
-      can continue to scroll down to see more details and credentials about me.
+    title: Launching Soon
+    subtitle: Preview our work in progress
     styles:
       self:
         height: auto
@@ -31,112 +26,72 @@ sections:
           - mr-0
         padding:
           - pt-36
-          - pb-48
+          - pb-12
           - pl-4
           - pr-4
-        flexDirection: row-reverse
-        textAlign: left
+        alignItems: center
+        flexDirection: col
+        textAlign: center
     type: HeroSection
-    actions: []
-  - colors: colors-f
-    type: FeaturedProjectsSection
-    elementId: ''
-    actions:
-      - type: Link
-        label: See all projects
-        url: /projects
-    showDate: false
-    showDescription: true
-    showFeaturedImage: true
-    showReadMoreLink: true
-    variant: variant-b
-    projects:
-      - content/pages/projects/project-two.md
-      - content/pages/projects/project-three.md
-      - content/pages/projects/project-one.md
-    styles:
-      self:
-        height: auto
-        width: wide
-        padding:
-          - pt-24
-          - pb-24
-          - pl-4
-          - pr-4
-        textAlign: left
-    subtitle: Projects
-  - type: FeaturedPostsSection
-    elementId: ''
+  - type: TextSection
     colors: colors-f
-    variant: variant-d
-    subtitle: Featured Posts
-    showFeaturedImage: false
-    actions:
-      - type: Link
-        label: See all posts
-        url: /blog
-    posts:
-      - content/pages/blog/post-six.md
-      - content/pages/blog/post-four.md
-      - content/pages/blog/post-three.md
-    showDate: true
-    showExcerpt: true
-    showReadMoreLink: true
+    variant: variant-a
+    text: >
+      <iframe width="100%" height="450" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/griffin-757805524/sets/alcatraz&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
     styles:
       self:
         height: auto
         width: narrow
+        margin:
+          - mt-0
+          - mb-0
+          - ml-0
+          - mr-0
         padding:
-          - pt-28
-          - pb-48
+          - pt-12
+          - pb-24
           - pl-4
           - pr-4
-        textAlign: left
+        justifyContent: center
   - type: ContactSection
     colors: colors-f
     backgroundSize: full
-    title: "Got an interesting project? Tell me more...\U0001F4AC"
+    title: 'Contact Us'
+    text: Drop us a line!
     form:
       type: FormBlock
-      elementId: sign-up-form
+      elementId: contact-form
       fields:
-        - name: firstName
-          label: First Name
+        - name: name
+          label: Name
           hideLabel: true
-          placeholder: First Name
-          isRequired: true
-          width: 1/2
-          type: TextFormControl
-        - name: lastName
-          label: Last Name
-          hideLabel: true
-          placeholder: Last Name
+          placeholder: Name
           isRequired: false
-          width: 1/2
+          width: full
           type: TextFormControl
         - name: email
           label: Email
           hideLabel: true
           placeholder: Email
           isRequired: true
-          width: 1/2
+          width: full
           type: EmailFormControl
-        - name: address
-          label: Address
+        - name: message
+          label: Message
           hideLabel: true
-          placeholder: Address
-          isRequired: true
-          width: 1/2
-          type: TextFormControl
+          placeholder: Message
+          isRequired: false
+          width: full
+          type: TextareaFormControl
         - name: updatesConsent
-          label: Sign me up to recieve updates
+          label: Sign up for our email list for updates, promotions, and more.
           isRequired: false
           width: full
           type: CheckboxFormControl
-      submitLabel: "Submit \U0001F680"
+      submitLabel: Send
       styles:
         self:
-          textAlign: center
+          textAlign: left
     styles:
       self:
         height: auto
@@ -151,6 +106,7 @@ sections:
           - pb-24
           - pr-4
           - pl-4
-        flexDirection: row
-        textAlign: left
+        alignItems: center
+        flexDirection: col
+        textAlign: center
 ---

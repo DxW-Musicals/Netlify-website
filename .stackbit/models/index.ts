@@ -9,6 +9,7 @@ import { DividerSectionModel } from './DividerSection';
 import { EmailFormControlModel } from './EmailFormControl';
 import { FeaturedItemModel } from './FeaturedItem';
 import { FeaturedItemsSectionModel } from './FeaturedItemsSection';
+import { FeaturedPeopleSectionModel } from './FeaturedPeopleSection';
 import { FeaturedPostsSectionModel } from './FeaturedPostsSection';
 import { FeaturedProjectsSectionModel } from './FeaturedProjectsSection';
 import { FooterModel } from './Footer';
@@ -54,6 +55,7 @@ export const allModels = [
     EmailFormControlModel,
     FeaturedItemModel,
     FeaturedItemsSectionModel,
+    FeaturedPeopleSectionModel,
     FeaturedPostsSectionModel,
     FeaturedProjectsSectionModel,
     FooterModel,

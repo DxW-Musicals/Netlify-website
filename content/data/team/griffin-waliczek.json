@@ -1,0 +1,12 @@
+{
+    "type": "Person",
+    "firstName": "Griffin",
+    "lastName": "Waliczek",
+    "role": "Composer, Lyricist & Story Architect",
+    "bio": "Griffin brings expertise in music theory and composition to DxW Musicals. As the primary composer and lyricist, he crafts the musical foundation of each production, developing show outlines, overall plot structures, and determining where songs fit within the narrative. Griffin's work ensures that music and story work in harmony to create compelling theatrical experiences.",
+    "image": {
+        "type": "ImageBlock",
+        "url": "/images/Griffin.jpg",
+        "altText": "Griffin Waliczek"
+    }
+}

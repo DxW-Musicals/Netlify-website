@@ -5,41 +5,16 @@
         "type": "Header",
         "headerVariant": "variant-c",
         "isSticky": false,
-        "title": "Personal",
+        "title": "DxW Musicals",
         "isTitleVisible": true,
         "primaryLinks": [
             {
                 "type": "Link",
-                "label": "Info",
+                "label": "About",
                 "url": "/info"
-            },
-            {
-                "type": "Link",
-                "label": "Projects",
-                "url": "/projects"
-            },
-            {
-                "type": "Link",
-                "label": "Blog",
-                "url": "/blog"
             }
         ],
-        "socialLinks": [
-            {
-                "type": "Social",
-                "altText": "Twitter",
-                "label": "Twitter",
-                "url": "https://twitter.com/netlify",
-                "icon": "twitter"
-            },
-            {
-                "type": "Social",
-                "altText": "GitHub",
-                "label": "GitHub",
-                "url": "https://github.com/netlify-templates",
-                "icon": "github"
-            }
-        ],
+        "socialLinks": [],
         "styles": {
             "self": {
                 "width": "full"
@@ -51,40 +26,28 @@
         "primaryLinks": [
             {
                 "type": "Link",
-                "label": "Info",
+                "label": "About",
                 "url": "/info",
                 "altText": ""
             },
             {
                 "type": "Link",
                 "label": "Contact",
-                "url": "mailto:thisismyemail.@myemail.me",
+                "url": "/#contact",
                 "altText": ""
-            },
-            {
-                "type": "Link",
-                "label": "Blog",
-                "url": "/blog",
-                "altText": ""
-            },
-            {
-                "type": "Link",
-                "label": "GitHub",
-                "url": "https://github.com/netlify-templates",
-                "altText": "Netlify templates"
             }
         ],
         "contacts": {
             "type": "ContactBlock",
             "title": "Contact details",
-            "phoneNumber": "850-123-5021",
-            "phoneAltText": "My phone number",
-            "email": "thisismyemail.@myemail.me",
-            "emailAltText": "My email",
-            "address": "312 Lovely Street, Brooklyn, NY, 123456",
-            "addressAltText": "My address"
+            "phoneNumber": "",
+            "phoneAltText": "",
+            "email": "",
+            "emailAltText": "",
+            "address": "",
+            "addressAltText": ""
         },
-        "copyrightText": "Powered by [Netlify](https://www.netlify.com/)",
+        "copyrightText": "© 2026 DxW Musicals. All rights reserved.",
         "styles": {
             "self": {
                 "width": "narrow",
