@@ -1,53 +1,186 @@
-# Netlify Developer Portfolio Starter (auto-annotated)
+# DxW Musicals Website
 
-![Developer Portfolio](https://assets.stackbit.com/docs/personal-nextjs-starter-thumb.png)
+The official website for DxW Musicals, built with Next.js and deployed on Netlify.
 
-This is a full-fledged portfolio website built with Next.js, Tailwind CSS, [visual editor](https://docs.netlify.com/visual-editor/overview/) and the [Git Content Source](https://docs.netlify.com/create/content-sources/git/).
+🌐 **Live Site:** [https://dxwmusicals.com](https://dxwmusicals.com)
 
-The codebase showcases **how to apply annotations at scale**, meaning: how to make much of your components [highlightable in the visual editor](https://docs.netlify.com/visual-editor/visual-editing/inline-editor/) through data attributes without manually adding code throughout the codebase.
+## Tech Stack
 
-**This is achieved by:**
+- **Framework:** Next.js 15.2.1
+- **React:** 19.0.0
+- **Styling:** Tailwind CSS 4.0.12
+- **Language:** TypeScript 5.8.2
+- **Deployment:** Netlify
+- **Content:** Markdown + JSON
 
-1. Adding an annotation property to the content objects at they're loaded (see `src/utils/content.ts`)
-1. When rendering the page, each content sub-object is dynamically matched to the appropriate component. At this point, wrap each component with an annotation, based on the abovementioned content property. See `src/components/components-registry.tsx`.
+## Project Structure
 
-**⚡ Demo:** [auto-annotated-portfolio.netlify.app](https://auto-annotated-portfolio.netlify.app)
-
-## Deploying to Netlify
-
-If you click "Deploy to Netlify" button, it will create a new repo for you that looks exactly like this one, and sets that repo up immediately for deployment on Netlify.
-
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/netlify-templates/auto-annotated-portfolio)
+```
+DxWmusicals-website/
+├── content/              # Content files
+│   ├── data/
+│   │   ├── config.json  # Site configuration
+│   │   ├── style.json   # Theme and styling
+│   │   └── team/        # Team member profiles (JSON)
+│   └── pages/           # Page content (Markdown)
+├── public/
+│   └── images/          # Static images
+├── src/
+│   ├── components/      # React components
+│   │   ├── atoms/       # Basic UI elements
+│   │   ├── molecules/   # Composite components
+│   │   ├── sections/    # Page sections
+│   │   └── layouts/     # Layout components
+│   ├── pages/           # Next.js pages
+│   │   ├── _app.js      # App wrapper
+│   │   ├── [[...slug]].tsx  # Dynamic page routing
+│   │   └── sitemap.xml.ts   # Sitemap generator
+│   ├── types/           # TypeScript type definitions
+│   └── utils/           # Utility functions
+└── netlify.toml         # Netlify configuration
+```
 
 ## Getting Started
 
-The typical development process is to begin by working locally. Clone this repository, then run `npm install` in its root directory.
+### Prerequisites
 
-Run the Next.js development server:
+- Node.js (recommended: latest LTS version)
+- npm or yarn
 
-```txt
-cd auto-annotated-portfolio
+### Installation
+
+1. Clone the repository:
+```bash
+git clone https://github.com/DxW-Musicals/Netlify-website.git
+cd DxWmusicals-website
+```
+
+2. Install dependencies:
+```bash
+npm install
+```
+
+3. Run the development server:
+```bash
 npm run dev
 ```
 
-Install the [Netlify visual editor CLI](https://www.npmjs.com/package/@stackbit/cli). Then open a new terminal window in the same project directory and run the Netlify visual editor dev server:
+4. Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-```txt
-npm install -g @stackbit/cli
-stackbit dev
+## Available Scripts
+
+- `npm run dev` - Start development server
+- `npm run build` - Create production build
+- `npm start` - Start production server
+
+## Content Management
+
+### Adding/Editing Pages
+
+Pages are stored as Markdown files in `content/pages/`. Each page includes:
+
+- Front matter (metadata)
+- Content sections defined in YAML/JSON format
+- Markdown content
+
+**Example page structure:**
+```markdown
+---
+type: PageLayout
+title: Page Title
+sections:
+  - type: HeroSection
+    title: Welcome
+    # ... section configuration
+---
 ```
 
-This outputs your own Netlify visual editor URL. Open this, register or sign in, and you will be directed to Netlify's visual editor for your new project.
+### Managing Team Members
 
-![Next.js Dev + Netlify visual editor dev](https://assets.stackbit.com/docs/next-dev-stackbit-dev.png)
+Team member profiles are stored as JSON files in `content/data/team/`:
 
-## Next Steps
+```json
+{
+  "type": "Person",
+  "firstName": "John",
+  "lastName": "Doe",
+  "role": "Position",
+  "bio": "Bio text...",
+  "image": "/images/person.jpg"
+}
+```
 
-Here are a few suggestions on what to do next if you're new to Netlify Visual Editor:
+### Site Configuration
 
-- Learn [how Netlify Visual Editor works](https://docs.netlify.com/visual-editor/overview/)
-- Check [Netlify visual editor reference documentation](https://visual-editor-reference.netlify.com/)
+Edit `content/data/config.json` to update:
+- Site header and navigation
+- Footer content and links
+- Contact information
+- Social media links
+
+## Features
+
+### Automatic Sitemap Generation
+
+The site automatically generates an XML sitemap at build time. The sitemap is accessible at `/sitemap.xml` and includes all pages from the `content/pages/` directory.
+
+### Responsive Design
+
+Built with Tailwind CSS for a fully responsive experience across all devices.
+
+### Dynamic Routing
+
+Uses Next.js dynamic routing (`[[...slug]].tsx`) to handle all page routes based on content files.
+
+### Component-Based Architecture
+
+Modular component structure with:
+- **Atoms** - Basic UI elements (buttons, links, images)
+- **Molecules** - Composite components (forms, cards)
+- **Sections** - Page sections (hero, contact, featured items)
+- **Layouts** - Page layouts and templates
+
+## Deployment
+
+The site is automatically deployed to Netlify when changes are pushed to the main branch.
+
+### Netlify Configuration
+
+Build settings are defined in `netlify.toml`:
+- **Build command:** `npm run build`
+- **Publish directory:** `.next`
+- **Plugin:** `@netlify/plugin-nextjs`
+
+### Manual Deployment
+
+To deploy manually:
+
+1. Build the project:
+```bash
+npm run build
+```
+
+2. The build output will be in the `.next` directory and is ready for deployment.
+
+## Development
+
+### Code Style
+
+- ESLint configuration: `.eslintrc.json`
+- Prettier configuration: `.prettierrc`
+
+### TypeScript
+
+The project uses TypeScript with strict type checking. Type definitions are located in `src/types/`.
+
+## License
+
+MIT
 
 ## Support
 
-If you get stuck along the way, get help in our [support forums](https://answers.netlify.com/).
+For questions or issues, please contact the DxW Musicals team.
+
+---
+
+**© 2026 DxW Musicals. All rights reserved.**
