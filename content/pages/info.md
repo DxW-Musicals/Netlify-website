@@ -1,6 +1,8 @@
 ---
 type: PageLayout
 title: About
+metaTitle: About DxW Musicals - Meet Griffin and Max
+metaDescription: Learn about DxW Musicals and meet the creative team behind our original musical theater productions.
 colors: colors-a
 backgroundImage:
   type: BackgroundImage

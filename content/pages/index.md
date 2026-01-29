@@ -1,6 +1,8 @@
 ---
 type: PageLayout
 title: Home
+metaTitle: DxW Musicals - Original Musical Theater Productions
+metaDescription: DxW Musicals is creating original musical theater productions. Preview our work in progress and get in touch with our creative team.
 colors: colors-a
 backgroundImage:
   type: BackgroundImage
